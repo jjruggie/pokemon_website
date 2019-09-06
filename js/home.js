@@ -33,6 +33,13 @@ function buttonPokemon3(event) {
 var pokemonSelect = document.getElementById("pokemonSelector")
 function selectPokemon(event) {
   document.getElementsByTagName("body")[0].setAttribute("style", "background-image: url('assets/pokemon_battle_background.jpg')")
+  document.getElementById("stats").setAttribute("style", "display: none")
+  for (var i = 0; i < document.getElementsByClassName('buttonStyleClass').length; i++) {
+    document.getElementsByClassName('buttonStyleClass')[i].setAttribute("style", "display: none")
+  }
+  pokemon1Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
+  pokemon2Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
+  pokemon3Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
 }
 
 

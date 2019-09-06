@@ -27,3 +27,7 @@ body{
 #stats {
   display: none;
 }
+
+#expand {
+  height: 100%;
+}
