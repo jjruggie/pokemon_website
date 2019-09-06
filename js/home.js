@@ -37,9 +37,9 @@ function selectPokemon(event) {
   for (var i = 0; i < document.getElementsByClassName('buttonStyleClass').length; i++) {
     document.getElementsByClassName('buttonStyleClass')[i].setAttribute("style", "display: none")
   }
-  pokemon1Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
-  pokemon2Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
-  pokemon3Button.setAttribute("style", "postion: absolute; top: 100%; left: 0%")
+  pokemon1Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
+  pokemon2Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
+  pokemon3Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
 }
 
 
