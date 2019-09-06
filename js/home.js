@@ -54,6 +54,7 @@ function buttonFire(event) {
   pokemon2 = "arcane"
   pokemon3 = "flareon"
   type = "fire"
+  document.getElementById("stats").setAttribute("style", "display: none")
   injectPokemon([pokemon1, pokemon2, pokemon3])
 }
 
@@ -64,6 +65,7 @@ function buttonWater(event) {
   pokemon2 = "squirtle"
   pokemon3 = "gyarados"
   type = "water"
+  document.getElementById("stats").setAttribute("style", "display: none")
   injectPokemon([pokemon1, pokemon2, pokemon3])
 }
 
