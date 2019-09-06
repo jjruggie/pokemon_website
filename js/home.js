@@ -30,6 +30,10 @@ function buttonPokemon3(event) {
   getStats(temporaryPokemon)
 }
 
+var pokemonSelect = document.getElementById("pokemonSelector")
+function selectPokemon(event) {
+  document.getElementsByTagName("body")[0].setAttribute("style", "background-image: url('assets/pokemon_battle_background.jpg')")
+}
 
 
 function getStats(temporaryPokemon) {
@@ -43,7 +47,7 @@ function getStats(temporaryPokemon) {
 pokemon1Button.addEventListener("click", buttonPokemon1)
 pokemon2Button.addEventListener("click", buttonPokemon2)
 pokemon3Button.addEventListener("click", buttonPokemon3)
-
+pokemonSelect.addEventListener("click", selectPokemon)
 
 
 var button = document.getElementById("buttonFire");
