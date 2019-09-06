@@ -9,14 +9,42 @@ function buttonPokemon1(event) {
   document.getElementById("pokemon2").src = ""
   document.getElementById("pokemon3").src = ""
   var temporaryPokemon = new pokemon(pokemon1, type, 100 + Math.floor(20 * Math.random()), 1)
-  console.log(temporaryPokemon)
+  getStats(temporaryPokemon)
+}
+
+var pokemon2Button = document.getElementById("pokemon2")
+function buttonPokemon2(event) {
+  document.getElementById("stats").setAttribute("style", "display: block")
+  document.getElementById("pokemon1").src = ""
+  document.getElementById("pokemon3").src = ""
+  var temporaryPokemon = new pokemon(pokemon2, type, 100 + Math.floor(20 * Math.random()), 1)
+  getStats(temporaryPokemon)
+}
+
+var pokemon3Button = document.getElementById("pokemon3")
+function buttonPokemon3(event) {
+  document.getElementById("stats").setAttribute("style", "display: block")
+  document.getElementById("pokemon1").src = ""
+  document.getElementById("pokemon2").src = ""
+  var temporaryPokemon = new pokemon(pokemon3, type, 100 + Math.floor(20 * Math.random()), 1)
+  getStats(temporaryPokemon)
+}
+
+
+
+function getStats(temporaryPokemon) {
   document.getElementById("name").innerHTML = temporaryPokemon.name
   document.getElementById("type").innerHTML = temporaryPokemon.type
   document.getElementById("hp").innerHTML = temporaryPokemon.hp  + " hp"
   document.getElementById("level").innerHTML = "level " + temporaryPokemon.level
+
 }
 
 pokemon1Button.addEventListener("click", buttonPokemon1)
+pokemon2Button.addEventListener("click", buttonPokemon2)
+pokemon3Button.addEventListener("click", buttonPokemon3)
+
+
 
 var button = document.getElementById("buttonFire");
 
