@@ -32,3 +32,8 @@ body{
   width: 100vw;
   border: 1px solid green;
 }
+
+#enemy-display {
+  float: right;
+  display: none;
+}

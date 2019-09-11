@@ -46,7 +46,12 @@ function selectPokemon(event) {
   pokemon1Button.removeEventListener("click", buttonPokemon1, false)
   pokemon2Button.removeEventListener("click", buttonPokemon2, false)
   pokemon3Button.removeEventListener("click", buttonPokemon3, false)
+
+  document.getElementById("enemy-display").setAttribute("style", "display: block")
+  enemyPokemon()
+
 }
+
 
 
 function getStats(temporaryPokemon) {
