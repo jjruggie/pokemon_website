@@ -40,6 +40,12 @@ function selectPokemon(event) {
   pokemon1Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
   pokemon2Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
   pokemon3Button.setAttribute("style", "position: fixed; top: 50%; left: 0")
+
+  //invalidate all pokemon listener
+
+  pokemon1Button.removeEventListener("click", buttonPokemon1, false)
+  pokemon2Button.removeEventListener("click", buttonPokemon2, false)
+  pokemon3Button.removeEventListener("click", buttonPokemon3, false)
 }
 
 
@@ -51,9 +57,15 @@ function getStats(temporaryPokemon) {
 
 }
 
+function closeButton() {
+
+}
+
+
 pokemon1Button.addEventListener("click", buttonPokemon1)
 pokemon2Button.addEventListener("click", buttonPokemon2)
 pokemon3Button.addEventListener("click", buttonPokemon3)
+
 pokemonSelect.addEventListener("click", selectPokemon)
 
 
