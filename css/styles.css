@@ -37,3 +37,7 @@ body{
   float: right;
   display: none;
 }
+
+#pokemonSelector {
+  display: none;
+}

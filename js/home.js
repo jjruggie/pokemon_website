@@ -4,11 +4,13 @@ var pokemon3 = null
 var pokemons = [];
 var type = null
 var pokemon1Button = document.getElementById("pokemon1")
+var temporaryPokemon = null
+
 function buttonPokemon1(event) {
   document.getElementById("stats").setAttribute("style", "display: block")
   document.getElementById("pokemon2").src = ""
   document.getElementById("pokemon3").src = ""
-  var temporaryPokemon = new pokemon(pokemon1, type, 100 + Math.floor(20 * Math.random()), 1)
+  temporaryPokemon = new pokemon(pokemon1, type, 100 + Math.floor(20 * Math.random()), 1)
   getStats(temporaryPokemon)
 }
 
@@ -17,7 +19,7 @@ function buttonPokemon2(event) {
   document.getElementById("stats").setAttribute("style", "display: block")
   document.getElementById("pokemon1").src = ""
   document.getElementById("pokemon3").src = ""
-  var temporaryPokemon = new pokemon(pokemon2, type, 100 + Math.floor(20 * Math.random()), 1)
+  temporaryPokemon = new pokemon(pokemon2, type, 100 + Math.floor(20 * Math.random()), 1)
   getStats(temporaryPokemon)
 }
 
@@ -26,14 +28,13 @@ function buttonPokemon3(event) {
   document.getElementById("stats").setAttribute("style", "display: block")
   document.getElementById("pokemon1").src = ""
   document.getElementById("pokemon2").src = ""
-  var temporaryPokemon = new pokemon(pokemon3, type, 100 + Math.floor(20 * Math.random()), 1)
+  temporaryPokemon = new pokemon(pokemon3, type, 100 + Math.floor(20 * Math.random()), 1)
   getStats(temporaryPokemon)
 }
 
 var pokemonSelect = document.getElementById("pokemonSelector")
 function selectPokemon(event) {
   document.getElementsByTagName("body")[0].setAttribute("style", "background-image: url('assets/pokemon_battle_background.jpg')")
-  document.getElementById("stats").setAttribute("style", "display: none")
   for (var i = 0; i < document.getElementsByClassName('buttonStyleClass').length; i++) {
     document.getElementsByClassName('buttonStyleClass')[i].setAttribute("style", "display: none")
   }
@@ -59,7 +60,7 @@ function getStats(temporaryPokemon) {
   document.getElementById("type").innerHTML = temporaryPokemon.type
   document.getElementById("hp").innerHTML = temporaryPokemon.hp  + " hp"
   document.getElementById("level").innerHTML = "level " + temporaryPokemon.level
-
+  document.getElementById("pokemonSelector").setAttribute("style", "display: block")
 }
 
 function closeButton() {
